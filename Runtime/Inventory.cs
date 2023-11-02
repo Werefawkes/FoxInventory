@@ -6,6 +6,6 @@ namespace Foxthorne.FoxInventory
 {
 	public class Inventory : MonoBehaviour
 	{
-
+		public ItemStack[] contents;
 	}
 }
