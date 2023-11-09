@@ -52,18 +52,20 @@ namespace Foxthorne.FoxInventory
 		/// <returns>The number of remaining items, if this stack's Count was less than <paramref name="amount"/>.</returns>
 		public int RemoveItems(int amount)
 		{
+			// Verify the amount
 			if (amount < 1)
 			{
 				Debug.LogError("Invalid item amount " + amount);
 				return -1;
 			}
 
-			if (Count > amount)
+			// If there are enough items in this stack
+			if (Count >= amount)
 			{
 				Count -= amount;
 				return 0;
 			}
-			else
+			else // If there aren't enough items
 			{
 				int remaining = amount - Count;
 				Count = 0;
@@ -96,7 +98,5 @@ namespace Foxthorne.FoxInventory
 				return new ItemStack(ItemData, sum - ItemData.maxStackSize);
 			}
 		}
-
-
 	}
 }

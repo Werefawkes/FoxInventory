@@ -23,7 +23,17 @@ namespace Foxthorne.FoxInventory
 		{
 			if (mustHaveAmount && !HasItems(item, amount)) return false;
 
+			foreach (ItemStack s in contents)
+			{
+				if (amount <= 0) return true;
 
+				if (s.ItemData == item)
+				{
+					amount = s.RemoveItems(amount);
+				}
+			}
+
+			return false;
 		}
 
 		#region Checker methods
