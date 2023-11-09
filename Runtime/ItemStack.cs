@@ -46,6 +46,32 @@ namespace Foxthorne.FoxInventory
 		}
 
 		/// <summary>
+		/// Removes <paramref name="amount"/> from this item stack.
+		/// </summary>
+		/// <param name="amount"></param>
+		/// <returns>The number of remaining items, if this stack's Count was less than <paramref name="amount"/>.</returns>
+		public int RemoveItems(int amount)
+		{
+			if (amount < 1)
+			{
+				Debug.LogError("Invalid item amount " + amount);
+				return -1;
+			}
+
+			if (Count > amount)
+			{
+				Count -= amount;
+				return 0;
+			}
+			else
+			{
+				int remaining = amount - Count;
+				Count = 0;
+				return remaining;
+			}
+		}
+
+		/// <summary>
 		/// Adds two stacks together, returning the excess items.
 		/// </summary>
 		/// <param name="otherItems"></param>
