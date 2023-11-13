@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Foxthorne.FoxInventory
 {
+    [CreateAssetMenu(fileName = "New Item Data", menuName = "Foxthorne/Inventory/ItemData")]
     public class SO_ItemData : ScriptableObject
     {
         public string itemName;
