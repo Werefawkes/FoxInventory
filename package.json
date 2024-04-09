@@ -1,19 +1,19 @@
 {
-	"name": "com.foxthorne.foxinventory",
-	"version": "0.0.1",
-	"displayName": "Fox Inventory",
-	"description": "Suite of scripts for managing inventories.",
-	"unity": "2021.3",
-	"documentationUrl": "https://github.com/Werefawkes/FoxScreens/wiki",
-	"keywords": [
-	  "ui",
-	  "hud"
-	],
-	"author": {
-	  "name": "Foxthorne",
-	  "email": "jack@wrightus.com"
-	},
-	"dependencies": {
-	  "com.foxthorne.utilities": "0.0.1"
-	}
+  "name": "com.foxthorne.foxinventory",
+  "version": "0.0.1",
+  "displayName": "Fox Inventory",
+  "description": "Suite of scripts for managing inventories.",
+  "unity": "2021.3",
+  "documentationUrl": "https://github.com/Werefawkes/FoxScreens/wiki",
+  "keywords": [
+    "ui",
+    "hud"
+  ],
+  "author": {
+    "name": "Foxthorne",
+    "email": "jack@wrightus.com"
+  },
+  "dependencies": {
+    "com.foxthorne.foxcore": "0.0.1"
   }
+}
